@@ -187,6 +187,8 @@ strong{font-weight:600}
   content:"";position:absolute;top:-160px;right:-140px;width:520px;height:520px;border-radius:50%;
   background:var(--rosa-po);z-index:-1
 }
+.hero--com-foto{background:linear-gradient(100deg,rgba(246,239,230,.97) 0%,rgba(246,239,230,.93) 26%,rgba(246,239,230,.55) 52%,rgba(246,239,230,.93) 74%,rgba(246,239,230,.97) 100%),var(--hero-foto) center/cover no-repeat}
+.hero--com-foto::before{content:none}
 .hero__grid{display:grid;grid-template-columns:minmax(0,1.22fr) minmax(0,1fr) 230px;gap:clamp(20px,2.6vw,38px);align-items:center}
 .hero__eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.8rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--verde);margin-bottom:22px}
 .hero__eyebrow::before{content:"";width:34px;height:1.5px;background:currentColor}
@@ -222,6 +224,8 @@ strong{font-weight:600}
   background:linear-gradient(150deg,#F7E4E7 0%,#EFD9CE 55%,#E7CBB8 100%);
   display:flex;align-items:flex-end;min-height:180px;border:1px solid rgba(44,28,21,.10)
 }
+.foto__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;border-radius:inherit}
+.foto--com-foto .foto__legenda,.produto__foto.foto--com-foto span{display:none}
 .foto__legenda{
   position:relative;z-index:2;margin:0;padding:14px 16px;width:100%;
   font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:var(--cafe-texto);
@@ -252,6 +256,7 @@ strong{font-weight:600}
   .vantagem{flex:1 1 240px}
 }
 @media (max-width:820px){
+  .hero--com-foto{background:linear-gradient(180deg,rgba(246,239,230,.96),rgba(246,239,230,.9)),var(--hero-foto) center/cover no-repeat}
   .hero{padding-top:calc(var(--header-h) + 30px)}
   .hero__grid{grid-template-columns:1fr}
   .palco{min-height:400px;margin-top:10px}
@@ -554,7 +559,7 @@ strong{font-weight:600}
 <!-- =========================================================
      HERO
      ========================================================= -->
-<section class="hero" id="topo">
+<section class="hero" id="topo" data-fundo="img/hero-fachada.jpg">
   <div class="container hero__grid">
 
     <div class="hero__texto">
@@ -576,7 +581,7 @@ strong{font-weight:600}
     <div class="palco">
       <div class="palco__circulo" aria-hidden="true"></div>
       <div class="palco__gomos" aria-hidden="true"></div>
-      <div class="foto">
+      <div class="foto" data-img="img/hero-taca.jpg" data-alt="Taça instagramável servida na mesa junto à janela, com a parede florida ao fundo">
         <p class="foto__legenda">FOTO: taça instagramável em recorte, sobre a mesa junto à janela</p>
       </div>
       <div class="palco__pil">
@@ -637,7 +642,7 @@ strong{font-weight:600}
 <section class="secao" id="sobre">
   <div class="container sobre__grid">
     <div class="sobre__foto anim">
-      <div class="foto">
+      <div class="foto" data-img="img/sobre-capuccino.jpg" data-alt="Capuccino sendo finalizado no balcão, com a vitrine de doces ao fundo">
         <p class="foto__legenda">FOTO: capuccino sendo finalizado no balcão, com a vitrine de doces ao fundo</p>
       </div>
       <div class="adesivo" aria-hidden="true"><span>desde<b>2022</b></span></div>
@@ -679,7 +684,7 @@ strong{font-weight:600}
           <p>Guardamos aqui o primeiro forno alemão do Brasil, junto com fotografias da construção e objetos da época. Não é cenário: é a memória da casa, aberta a quem quiser olhar de perto enquanto o café passa.</p>
           <p>Quem faz o roteiro histórico do bairro costuma terminar a caminhada por aqui — com uma fatia de bolo na mesa e a história do prédio ao lado.</p>
         </div>
-        <div class="foto">
+        <div class="foto" data-img="img/historia-forno.jpg" data-alt="O primeiro forno alemão do Brasil, no mini-museu, ao lado das fotos antigas da construção">
           <p class="foto__legenda">FOTO: o primeiro forno alemão do Brasil, no mini-museu, com as fotos antigas da construção</p>
         </div>
       </div>
@@ -839,7 +844,7 @@ strong{font-weight:600}
       <div class="produtos">
         <article class="produto">
           <div class="produto__circulo" aria-hidden="true">
-            <div class="produto__foto"><span>FOTO: Bing Bong com algodão-doce</span></div>
+            <div class="produto__foto" data-img="img/insta-bing-bong.jpg" data-alt="Milkshake Bing Bong coroado com algodão-doce"><span>FOTO: Bing Bong com algodão-doce</span></div>
           </div>
           <div class="produto__corpo">
             <p class="produto__tag">Milkshakes</p>
@@ -852,7 +857,7 @@ strong{font-weight:600}
 
         <article class="produto">
           <div class="produto__circulo" aria-hidden="true">
-            <div class="produto__foto"><span>FOTO: taça Cinderela</span></div>
+            <div class="produto__foto" data-img="img/insta-cinderela.jpg" data-alt="Taça Cinderela com brownie, sorvete, nutella e morango"><span>FOTO: taça Cinderela</span></div>
           </div>
           <div class="produto__corpo">
             <p class="produto__tag">Taças</p>
@@ -865,7 +870,7 @@ strong{font-weight:600}
 
         <article class="produto">
           <div class="produto__circulo" aria-hidden="true">
-            <div class="produto__foto"><span>FOTO: taça Aurora</span></div>
+            <div class="produto__foto" data-img="img/insta-aurora.jpg" data-alt="Taça Aurora com cookie, sorvete, nutella e morangos"><span>FOTO: taça Aurora</span></div>
           </div>
           <div class="produto__corpo">
             <p class="produto__tag">Taças</p>
@@ -878,7 +883,7 @@ strong{font-weight:600}
 
         <article class="produto">
           <div class="produto__circulo" aria-hidden="true">
-            <div class="produto__foto"><span>FOTO: Mocca Trolls</span></div>
+            <div class="produto__foto" data-img="img/insta-mocca-trolls.jpg" data-alt="Mocca Trolls, café especial em camadas coloridas"><span>FOTO: Mocca Trolls</span></div>
           </div>
           <div class="produto__corpo">
             <p class="produto__tag">Cafés Especiais</p>
@@ -900,7 +905,7 @@ strong{font-weight:600}
   <div class="container">
     <div class="eventos__grid">
       <div class="eventos__foto anim">
-        <div class="foto">
+        <div class="foto" data-img="img/eventos-cha.jpg" data-alt="Mesa posta para um chá, com bolo, taças e flores, no andar de cima">
           <p class="foto__legenda">FOTO: mesa posta para um chá, com bolo, taças e flores, no andar de cima</p>
         </div>
       </div>
@@ -944,16 +949,16 @@ strong{font-weight:600}
       <h2>Cada andar tem um jeito de sentar</h2>
     </div>
     <div class="galeria">
-      <div class="foto g1 anim"><p class="foto__legenda">FOTO: fachada do prédio de 1923 vista da calçada</p></div>
-      <div class="foto g2 anim"><p class="foto__legenda">FOTO: parede florida, ponto preferido das fotos</p></div>
-      <div class="foto g3 anim"><p class="foto__legenda">FOTO: escada de madeira que leva aos andares de cima</p></div>
-      <div class="foto g4 anim"><p class="foto__legenda">FOTO: jardim com mesas ao ar livre</p></div>
-      <div class="foto g5 anim"><p class="foto__legenda">FOTO: salão do segundo andar com mesas postas e luz da janela</p></div>
-      <div class="foto g6 anim"><p class="foto__legenda">FOTO: vitrine de doces e balcão de café</p></div>
-      <div class="foto g7 anim"><p class="foto__legenda">FOTO: cliente trabalhando no notebook com um capuccino</p></div>
-      <div class="foto g8 anim"><p class="foto__legenda">FOTO: cachorro deitado ao lado da mesa — casa pet friendly</p></div>
-      <div class="foto g9 anim"><p class="foto__legenda">FOTO: o mini-museu com o forno alemão</p></div>
-      <div class="foto g10 anim"><p class="foto__legenda">FOTO: mesa junto à janela com fatia de bolo e café</p></div>
+      <div class="foto g1 anim" data-img="img/espaco-01-fachada.jpg" data-alt="Fachada do prédio de 1923 vista da calçada"><p class="foto__legenda">FOTO: fachada do prédio de 1923 vista da calçada</p></div>
+      <div class="foto g2 anim" data-img="img/espaco-02-parede-florida.jpg" data-alt="Parede florida da cafeteria, ponto preferido das fotos"><p class="foto__legenda">FOTO: parede florida, ponto preferido das fotos</p></div>
+      <div class="foto g3 anim" data-img="img/espaco-03-escada.jpg" data-alt="Escada de madeira que leva aos andares de cima"><p class="foto__legenda">FOTO: escada de madeira que leva aos andares de cima</p></div>
+      <div class="foto g4 anim" data-img="img/espaco-04-jardim.jpg" data-alt="Jardim da cafeteria com mesas ao ar livre"><p class="foto__legenda">FOTO: jardim com mesas ao ar livre</p></div>
+      <div class="foto g5 anim" data-img="img/espaco-05-salao.jpg" data-alt="Salão do segundo andar com mesas postas e luz da janela"><p class="foto__legenda">FOTO: salão do segundo andar com mesas postas e luz da janela</p></div>
+      <div class="foto g6 anim" data-img="img/espaco-06-vitrine.jpg" data-alt="Vitrine de doces e balcão de café"><p class="foto__legenda">FOTO: vitrine de doces e balcão de café</p></div>
+      <div class="foto g7 anim" data-img="img/espaco-07-trabalho.jpg" data-alt="Cliente trabalhando no notebook com um capuccino"><p class="foto__legenda">FOTO: cliente trabalhando no notebook com um capuccino</p></div>
+      <div class="foto g8 anim" data-img="img/espaco-08-pet.jpg" data-alt="Cachorro deitado ao lado da mesa, em casa pet friendly"><p class="foto__legenda">FOTO: cachorro deitado ao lado da mesa — casa pet friendly</p></div>
+      <div class="foto g9 anim" data-img="img/espaco-09-mini-museu.jpg" data-alt="Mini-museu com o forno alemão e as fotografias antigas"><p class="foto__legenda">FOTO: o mini-museu com o forno alemão</p></div>
+      <div class="foto g10 anim" data-img="img/espaco-10-mesa-janela.jpg" data-alt="Mesa junto à janela com fatia de bolo e café"><p class="foto__legenda">FOTO: mesa junto à janela com fatia de bolo e café</p></div>
     </div>
   </div>
 </section>
@@ -1239,6 +1244,42 @@ strong{font-weight:600}
     alvos.forEach(function(a){ obs.observe(a); });
   } else {
     alvos.forEach(function(a){ a.classList.add('visivel'); });
+  }
+
+  /* ---------- Fotos reais (pasta img/) com placeholder de reserva ----------
+     Se o arquivo ainda não existe, nada quebra: o degradê e a legenda ficam. */
+  function carregarFoto(caixa){
+    var arquivo = caixa.dataset.img;
+    if (!arquivo) return;
+    var im = new Image();
+    im.onload = function(){
+      im.className = 'foto__img';
+      im.alt = caixa.dataset.alt || '';
+      caixa.insertBefore(im, caixa.firstChild);
+      caixa.classList.add('foto--com-foto');
+    };
+    im.src = arquivo;
+  }
+  var caixas = Array.prototype.slice.call(document.querySelectorAll('[data-img]'));
+  if ('IntersectionObserver' in window) {
+    var obsFoto = new IntersectionObserver(function(entradas){
+      entradas.forEach(function(en){
+        if (en.isIntersecting) { carregarFoto(en.target); obsFoto.unobserve(en.target); }
+      });
+    }, { rootMargin:'300px' });
+    caixas.forEach(function(c){ obsFoto.observe(c); });
+  } else {
+    caixas.forEach(carregarFoto);
+  }
+
+  var hero = document.querySelector('[data-fundo]');
+  if (hero) {
+    var fundo = new Image();
+    fundo.onload = function(){
+      hero.style.setProperty('--hero-foto', 'url("' + hero.dataset.fundo + '")');
+      hero.classList.add('hero--com-foto');
+    };
+    fundo.src = hero.dataset.fundo;
   }
 
   /* ---------- Ano no rodapé ---------- */

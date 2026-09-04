@@ -1,0 +1,39 @@
+FOTOS DO SITE — Café Princess Candy
+====================================
+
+Coloque as fotos nesta pasta, com exatamente estes nomes de arquivo.
+Enquanto um arquivo não existir, o site mostra o placeholder rosa com a
+legenda descrevendo a foto que entra ali — nada quebra.
+
+Formato sugerido: JPG (ou WebP, trocando a extensão no index.html),
+qualidade 80, largura máxima de 1600px, arquivos abaixo de 400 KB.
+
+  hero-fachada.jpg .............. fundo do topo do site: fachada rosa do prédio
+                                  de 1923, com a placa e o jardim (horizontal)
+  hero-taca.jpg ................. taça instagramável na mesa junto à janela,
+                                  com a parede florida ao fundo (vertical)
+  sobre-capuccino.jpg ........... capuccino sendo finalizado no balcão, com a
+                                  vitrine de doces ao fundo (vertical)
+  historia-forno.jpg ............ o primeiro forno alemão do Brasil no
+                                  mini-museu, com as fotos antigas (horizontal)
+  insta-bing-bong.jpg ........... milkshake Bing Bong com algodão-doce
+  insta-cinderela.jpg ........... taça Cinderela
+  insta-aurora.jpg .............. taça Aurora
+  insta-mocca-trolls.jpg ........ Mocca Trolls
+  eventos-cha.jpg ............... mesa posta para um chá no andar de cima
+  espaco-01-fachada.jpg ......... fachada vista da calçada (vertical)
+  espaco-02-parede-florida.jpg .. parede florida
+  espaco-03-escada.jpg .......... escada de madeira
+  espaco-04-jardim.jpg .......... jardim com mesas ao ar livre
+  espaco-05-salao.jpg ........... salão do segundo andar (horizontal)
+  espaco-06-vitrine.jpg ......... vitrine de doces e balcão
+  espaco-07-trabalho.jpg ........ cliente trabalhando com um capuccino
+  espaco-08-pet.jpg ............. cachorro ao lado da mesa
+  espaco-09-mini-museu.jpg ...... mini-museu com o forno e as fotos antigas
+  espaco-10-mesa-janela.jpg ..... mesa junto à janela com bolo e café
+
+As quatro fotos "insta-" aparecem em cards quadrados; as demais preenchem
+o espaço com recorte central (object-fit: cover).
+
+Os textos alternativos (alt) já estão escritos no index.html — se a foto
+mudar de conteúdo, ajuste o alt correspondente.
